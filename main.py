@@ -1,9 +1,14 @@
-"""Example script using NYTXMLParser."""
+"""Launch the NYTXML GUI application."""
 
-from nyt_xmlparse import NYTXMLParser
+from nyt_xmlparse import NYTXMLGuiApp
+import tkinter as tk
+
+
+def main() -> None:
+    root = tk.Tk()
+    NYTXMLGuiApp(root)
+    root.mainloop()
+
 
 if __name__ == "__main__":
-    parser = NYTXMLParser()
-    sample_xml = "<root><item>NYT</item></root>"
-    root = parser.parse(sample_xml)
-    print(root.tag)
+    main()
